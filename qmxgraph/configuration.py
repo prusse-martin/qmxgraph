@@ -39,7 +39,7 @@ class GraphOptions(object):
         of cells.
     :ivar bool cells_resizable: Specifies if vertices in graph can be
         resized.
-    :ivar tuple[str, int, int]|None connection_image: If configured,
+    :ivar tuple[str,int,int]|None connection_image: If configured,
         this image is shown to user when he hovers a vertex. It can be
         clicked and dragged to create edges. Respectively, formed by
         image path, its width and height.
@@ -48,7 +48,7 @@ class GraphOptions(object):
         all fonts in graph. It configures a priority list, trying always to
         use the left-most family first.
     :ivar bool multigraph: Allow multiple edges between nodes
-    :ivar tuple[str, int, int]|None port_image: Replaces image in
+    :ivar tuple[str,int,int]|None port_image: Replaces image in
         connection ports. Respectively, formed by image path, its width and
         height.
     :ivar bool show_grid: Show a grid in background to aid users.
@@ -117,23 +117,24 @@ class GraphStyles(object):
 
     Example of styles:
 
-    ```
-    GraphStyles({
-        'group': {
-            'shape': 'rectangle',
-            'fill_color': None,
-            'dashed': True,
-        },
-        'foo': {
-            'shape': 'star',
-            'fill_color': '#ffffff',
-        },
-        'bar': {
-            'fill_color': '#ff00ff',
-            'dashed': True,
-        },
-    })
-    ```
+    .. code-block::
+
+        GraphStyles({
+            'group': {
+                'shape': 'rectangle',
+                'fill_color': None,
+                'dashed': True,
+            },
+            'foo': {
+                'shape': 'star',
+                'fill_color': '#ffffff',
+            },
+            'bar': {
+                'fill_color': '#ff00ff',
+                'dashed': True,
+            },
+        })
+
     """
 
     def __init__(self, styles=None):

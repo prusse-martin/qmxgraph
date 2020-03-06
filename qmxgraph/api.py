@@ -71,7 +71,7 @@ class QmxGraphApi(object):
         :param dict[str, str]|None tags: Tags are basically custom
             attributes that may be added to a cell that may be later queried
             (or even modified), with the objective of allowing better
-             inspection and interaction with cells in a graph.
+            inspection and interaction with cells in a graph.
         """
         return self.call_api(
             'insertPort', vertex_id, port_name, x, y, width, height, label,
@@ -668,11 +668,14 @@ class QmxGraphApi(object):
 
         :param str edge_id: Id of an edge in graph.
         :rtype: list[List[str|None]]
-        :return: A list with 4 items:
+        :return: 2 lists with 2 items each:
+
             - - the source vertex id;
               - the port's name used on the source (can be `None`);
+
             - - the target vertex id;
               - the port's name used on the target (can be `None`);
+
         """
         return self.call_api('getEdgeTerminalsWithPorts', edge_id)
 
