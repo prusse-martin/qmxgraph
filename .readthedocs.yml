@@ -1,21 +1,21 @@
 version: 2
 
-formats: all
-
-python:
-   version: 3.6
-#   install:
-#      - method: pip
-#        path: .
-#        extra_requirements:
-#            - sphinx
-#            - sphinx_rtd_theme
-
-conda:
-  environment: base_environment.yml
-
 build:
   image: latest
 
 sphinx:
+  configuration: docs/conf.py
   fail_on_warning: true
+
+formats: all
+
+python:
+   version: 3.6
+   install:
+      - method: pip
+        path: .
+
+conda:
+  environment: base_environment.yml
+
+
