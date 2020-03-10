@@ -6,6 +6,7 @@ version = ""
 release = ""
 source_suffix = ".rst"
 html_theme = "sphinx_rtd_theme"
+html_title = "QmxGraph's Documentation"
 master_doc = "index"
 language = None
 pygments_style = "sphinx"
